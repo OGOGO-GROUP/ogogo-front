@@ -72,11 +72,15 @@
     .block {
         flex-wrap: wrap;
         column-gap: 2%;
-        row-gap: 20px;
     }
 
     .item {
         width: 49%;
+        margin-bottom: 20px;
+    }
+
+    .item:last-child {
+        margin-bottom: 0;
     }
 }
 
