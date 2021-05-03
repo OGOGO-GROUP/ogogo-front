@@ -50,6 +50,12 @@
     background: #ec7200;
 }
 
+@media screen and (max-width: 800px) {
+    .topline {
+        background-position: -400px 0;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .heading {
         font-size: 45px;
@@ -57,5 +63,9 @@
 
     .text {
         font-size: 20px;
+    }
+
+    .topline {
+        background-position: -500px 0;
     }
 }

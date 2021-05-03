@@ -87,8 +87,16 @@
     }
 }
 
-@media screen and (max-width: 370px) {
-    .item:nth-child(2) {
-        word-wrap: break-word;
+@media screen and (max-width: 400px) {
+    .item:nth-child(1) > h3 {
+        font-size: 18px;
+    }
+
+    .item:nth-child(2) > a {
+        font-size: 18px;
+    }
+
+    .item:nth-child(3) > a {
+        font-size: 18px;
     }
 }

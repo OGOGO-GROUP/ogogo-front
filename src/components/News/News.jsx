@@ -18,7 +18,7 @@ export const News = () => {
     ]
 
     return (
-        <div className={Styles.news}>
+        <div className={Styles.news} id="news">
             <div className="container">
                 <h3 className={Styles.heading}>
                     Новости

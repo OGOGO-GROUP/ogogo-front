@@ -118,11 +118,12 @@
 }
 
 @media screen and (max-width: 450px) {
-    .item {
-        row-gap: 20px;
-    }
-
     .course {
         width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .course:last-child {
+        margin-bottom: 0;
     }
 }
