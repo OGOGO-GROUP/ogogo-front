@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useGet } from '../../hooks/get.hook'
+import { Modal } from '../Modal/Modal'
 import Styles from './Animated.module.css'
 
 export const Animated = () => {
+    const { data } = useGet('courses')
+    const [modal, setModal] = useState({
+        opened: false,
+        course: ''
+    })
+
+    const openModal = (select, on) => {
+        setModal({
+            opened: true,
+            on: on,
+            select: select
+        })
+    }
+
+    const select = data.map(({ title }) => {
+        return { course: title }
+    })
+
     return (
         <div className={Styles.animated}>
             <div className="container">
@@ -10,13 +30,19 @@ export const Animated = () => {
                         <div>
                             <h3 className={Styles.heading}>OGOGO ты уже <br/> дошел до сюда?</h3>
                             <p className={Styles.text}>Тогда самое время <br/> записаться к нам!</p>
-                            <button className={Styles.button}>Оставить заявку</button>
+                            <button onClick={() => {openModal(select, true)}} className={Styles.button}>
+                                Оставить заявку
+                            </button>
                         </div>
                     </div>
                     <div className={Styles.item}>
                     </div>
                 </div>
             </div>
+            {
+                modal.opened === true ?
+                <Modal modal={ modal } setModal={ setModal } /> : null
+            }
         </div>
     )
 }

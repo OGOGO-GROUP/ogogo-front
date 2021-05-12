@@ -7,7 +7,7 @@ export const Modal = ({ modal, setModal }) => {
     const [form, setForm] = useState({})
 
     const changeHandler = (event) => {
-        setForm({ ...form, [event.target.name]: event.target.value, 'course_name': modal.course })
+        setForm({ ...form, [event.target.name]: event.target.value })
     }
 
     const escHandler = useCallback((event) => {
@@ -49,14 +49,27 @@ export const Modal = ({ modal, setModal }) => {
                         </span>
                     </button>
                 </h3>
-                <p className={Styles.text}>
+                <p className={Styles.text} style={ modal.on === false ? { display: 'none' } : {}}>
                     <span>
                         <span className={`material-icons ${Styles.arrow}`}>
                             chevron_right
                         </span>
                         Выбранная услуга
                     </span> <br/>
-                    Записаться на курс "{modal.course}"
+                    {
+                        modal.on === true ?
+                        <select className={Styles.input} onChange={changeHandler} name="course_name" id="course_name">
+                            {
+                                modal.select.map(({ course }, i) => {
+                                    return <option key={ i } value={ course }>
+                                        { course }
+                                    </option>
+                                })
+                            }
+                        </select> :
+                        `Записаться на курс "${modal.course}"`
+                    }
+                    {/* Записаться на курс "{modal.course}" */}
                 </p>
                 <form action="POST">
                     {inputs.map(({ type, name, id, placeholder, label }, i) => {
@@ -74,7 +87,18 @@ export const Modal = ({ modal, setModal }) => {
                             </div>
                         )
                     })}
-                    <button onClick={(e) => {e.preventDefault(); postHandler(form, 'forms/')}} className={Styles.button}>
+                    <button onClick={(e) => {
+                        e.preventDefault()
+                        if (modal.on !== true) {
+                            form['course_name'] = modal.course
+                            postHandler(form, 'forms/')
+                        } else if (modal.on !== false) {
+                            form['course_name'] = modal.course
+                            postHandler(form, 'forms/')
+                        } else {
+                            postHandler(form, 'forms/')
+                        }
+                    }} className={Styles.button}>
                         {
                             loading ?
                             <span className={Styles.loading}></span> :

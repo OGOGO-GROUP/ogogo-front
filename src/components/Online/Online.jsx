@@ -13,14 +13,14 @@ export const Online = () => {
                     <div className={Styles.item}>
                         <div className={Styles.course} data-aos="fade-right">
                             <p>Python</p>
-                            <button className={Styles.button}>
-                                Купить курс
+                            <button disabled className={Styles.button}>
+                                Скоро
                             </button>
                         </div>
                         <div className={Styles.course} data-aos="fade-right" data-aos-delay="100">
                             <p>JS</p>
-                            <button className={Styles.button}>
-                                Купить курс
+                            <button disabled className={Styles.button}>
+                                Скоро
                             </button>
                         </div>
                     </div>

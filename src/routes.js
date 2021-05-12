@@ -13,6 +13,7 @@ import { Certificate } from "./components/Certificate/Certificate"
 import { Footer } from "./components/Footer/Footer"
 
 import { NewsPage } from "./pages/NewsPage/NewsPage"
+import { NewsFragment } from "./fragments/NewsFragment"
 
 export const useRoutes = () => {
     return(
@@ -33,6 +34,9 @@ export const useRoutes = () => {
                 </Route>
                 <Route path="/news" exact>
                     <NewsPage />
+                </Route>
+                <Route path="/news/:id" exact>
+                    <NewsFragment />
                 </Route>
             </Switch>
             <Footer />

@@ -32,7 +32,7 @@ export const useHttp = () => {
 
     const clearError = useCallback(() => setError(null), [])
 
-    const API_URL = `https://ulanbek.pythonanywhere.com/api/v1/`
+    const API_URL = `http://academy.ogogo.kg:8080/api/v1/`
 
     return { loading, request, error, clearError, API_URL }
 }

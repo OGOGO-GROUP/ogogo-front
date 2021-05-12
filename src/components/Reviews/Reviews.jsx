@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useGet } from '../../hooks/get.hook'
 import Styles from './Reviews.module.css'
 
-import Thumbnail from './../../assets/images/reviews/review1.png'
+// import Thumbnail from './../../assets/images/reviews/review1.png'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Pagination, Navigation } from 'swiper'
@@ -40,7 +40,7 @@ export const Reviews = () => {
                         speed={1000}
                         // centeredSlides={true}
                         // allowTouchMove={false}
-                        // grabCursor={true}
+                        grabCursor={true}
                         spaceBetween={20}
                         slidesPerView={1}
                         navigation={{ clickable: true }}
@@ -52,16 +52,16 @@ export const Reviews = () => {
                             },
                             900: {
                                 slidesPerView: 3,
-                                allowTouchMove: false,
+                                // allowTouchMove: false,
                             }
                         }}
                     >
                         {
-                            data.map(({author, description, link}, i) => {
+                            data.map(({thumbnail, author, description, link}, i) => {
                                 return (
                                     <SwiperSlide className={Styles.slide} key={ i }>
                                         <div className={Styles.thumbnail} onClick={() => {openVideo(link, author)}}>
-                                            <img src={ Thumbnail } alt="thumbnail"/>
+                                            <img src={ thumbnail } alt="thumbnail"/>
                                         </div>
                                         <div className={Styles.desc}>
                                             <h4>{ author }</h4>
