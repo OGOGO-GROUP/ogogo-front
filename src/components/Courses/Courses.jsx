@@ -15,6 +15,7 @@ export const Courses = () => {
     const [show, setShow] = useState(null)
     const [modal, setModal] = useState({
         opened: false,
+        on: '',
         course: ''
     })
     
@@ -22,9 +23,10 @@ export const Courses = () => {
         setShow(i)
     }
 
-    const openModal = (course) => {
+    const openModal = (course, on) => {
         setModal({
             opened: true,
+            on: on,
             course: course
         })
     }
@@ -80,7 +82,7 @@ export const Courses = () => {
                                                 </button>
                                             </h4>
                                             <p>{ full_description }</p>
-                                            <button onClick={() => {openModal(title)}} className={Styles.button}>
+                                            <button onClick={() => {openModal(title, true)}} className={Styles.button}>
                                                 Оставить завку
                                             </button>
                                         </div>

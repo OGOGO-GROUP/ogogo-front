@@ -7,7 +7,8 @@ export const Topline = () => {
     const { data } = useGet('courses')
     const [modal, setModal] = useState({
         opened: false,
-        course: ''
+        on: '',
+        select: ''
     })
 
     const openModal = (select, on) => {

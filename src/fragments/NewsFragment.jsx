@@ -14,10 +14,10 @@ export const NewsFragment = () => {
         <Fragment>
             {
                 data.results ?
-                data.results.map((el, i) => {
+                data.results.map(({ id }, i) => {
                     return (
-                        <Route key={ i } path={`/news/${2}`} exact>
-                            <NewsSingle data={ data.results[i] } />
+                        <Route key={ i } path={`/news/${id}`} exact>
+                            <NewsSingle newsData={ data.results[i] } />
                         </Route>
                     )
                 }) : ''

@@ -3,9 +3,8 @@ import { useGet } from '../../hooks/get.hook'
 import { Modal } from '../Modal/Modal'
 import Styles from './NewsSingle.module.css'
 
-export const NewsSingle = () => {
-    let id = 2
-    const { data, loading } = useGet(`news/${id}`)
+export const NewsSingle = ({ newsData }) => {
+    const { data, loading } = useGet(`news/${newsData.id}`)
 
     const [modal, setModal] = useState({
         opened: false,
@@ -46,7 +45,7 @@ export const NewsSingle = () => {
                         }
                     </div>
                     {
-                        id === 2 ?
+                        newsData.id === 2 ?
                         <div className={Styles.send}>
                             <h4>Запишитесь на бесплатный мастер класс</h4>
                             <button onClick={() => {openModal(false, 'серию мастер-классов')}} className={Styles.button}>

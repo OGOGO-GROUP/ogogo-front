@@ -57,8 +57,11 @@ export const Modal = ({ modal, setModal }) => {
                         Выбранная услуга
                     </span> <br/>
                     {
-                        modal.on === true ?
+                        modal.on === true && modal.select ?
                         <select className={Styles.input} onChange={changeHandler} name="course_name" id="course_name">
+                            <option value="Не выбрано">
+                                Не выбрано
+                            </option>
                             {
                                 modal.select.map(({ course }, i) => {
                                     return <option key={ i } value={ course }>
@@ -89,11 +92,11 @@ export const Modal = ({ modal, setModal }) => {
                     })}
                     <button onClick={(e) => {
                         e.preventDefault()
-                        if (modal.on !== true) {
+                        if (!modal.select) {
                             form['course_name'] = modal.course
                             postHandler(form, 'forms/')
-                        } else if (modal.on !== false) {
-                            form['course_name'] = modal.course
+                        } else if (modal.on === true) {
+                            // form['course_name'] = modal.course
                             postHandler(form, 'forms/')
                         } else {
                             postHandler(form, 'forms/')
