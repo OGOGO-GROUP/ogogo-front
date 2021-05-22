@@ -14,7 +14,7 @@ export const useGet = (url) => {
                         setData(result)
                     })
             }
-        } catch (e) {}
+        } catch (e) { }
         return () => mounted = false
     }, [request, API_URL, url])
 

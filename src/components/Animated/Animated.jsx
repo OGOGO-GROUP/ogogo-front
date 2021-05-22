@@ -3,7 +3,7 @@ import { useGet } from '../../hooks/get.hook'
 import { Modal } from '../Modal/Modal'
 import Styles from './Animated.module.css'
 
-export const Animated = () => {
+export const Animated = ({ link }) => {
     const { data } = useGet('courses')
     const [modal, setModal] = useState({
         opened: false,
@@ -23,7 +23,7 @@ export const Animated = () => {
     })
 
     return (
-        <div className={Styles.animated}>
+        <div className={Styles.animated} ref={link}>
             <div className="container">
                 <div className={Styles.block} data-aos="zoom-in">
                     <div className={Styles.item}>

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import Styles from './App.module.css';
-import { BrowserRouter as Router } from "react-router-dom"
-import { useRoutes } from "./routes"
+import { BrowserRouter as Router } from "react-router-dom";
+import { useRoutes } from "./routes";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

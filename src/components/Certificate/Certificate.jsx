@@ -3,9 +3,9 @@ import Styles from './Certificate.module.css'
 
 import Cert from './../../assets/images/certificate.png'
 
-export const Certificate = () => {
+export const Certificate = ({ link }) => {
     return (
-        <div className={Styles.certificate}>
+        <div className={Styles.certificate} ref={link}>
             <div className="container">
                 <div className={Styles.block}>
                     <div className={Styles.item}>

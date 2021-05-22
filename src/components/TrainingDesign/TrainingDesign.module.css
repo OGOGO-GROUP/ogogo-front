@@ -1,0 +1,104 @@
+.training {
+  padding: 100px 0 80px;
+  position: relative;
+}
+.linearOne, .linearTwo {
+  position: absolute;
+  content: "";
+  top: 0;
+  z-index: -1;
+}
+.linearTwo {
+  top: 0;
+  left: 0;
+}
+.linearOne {
+  bottom: 100px;
+  right: 0;
+}
+.title {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  font-style: normal;
+  color: #292929;
+}
+.training hr {
+  border: solid 2px #292929;
+  margin: 40px 0;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 95px;
+}
+.description {
+  max-width: 522px;
+}
+.subtitle {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  font-style: normal;
+  color: #292929;
+  margin-bottom: 20px;
+}
+.subtitle span {
+  color: #ff7a00;
+}
+.text {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  color: #949494;
+}
+.courses {
+  width: 579px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+.item {
+  margin-bottom: 14px;
+  border-bottom: solid 1px #949494;
+  padding: 10px 0;
+}
+.item p {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  font-style: normal;
+  color: #949494;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .description {
+    margin-bottom: 40px;
+  }
+  .subtitle {
+    text-align: center;
+  }
+  .courses {
+    width: 409px;
+  }
+  .title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 460px) {
+  .courses {
+    width: 320px;
+  }
+  .text {
+    text-align: center;
+  }
+}
