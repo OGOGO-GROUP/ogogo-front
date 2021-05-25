@@ -15,7 +15,7 @@ export const Form = () => {
   return (
     <form className={Styles.form} onSubmit={sendRequest}>
       <p className={Styles.title}>
-        Получить <span>бесплатную</span> консультацию
+        Записаться на курсы в <span>OGOGO</span>  
       </p>
       <p
         className={
@@ -38,7 +38,7 @@ export const Form = () => {
           onChange={() => setError(false)}
         />
       </div>
-      <button className={Styles.btn}>Получить программу</button>
+      <button className={Styles.btn}>Отправить</button>
     </form>
   );
 };
