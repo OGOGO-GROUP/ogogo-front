@@ -24,8 +24,9 @@
   color: #292929;
 }
 .training hr {
-  border: solid 2px #292929;
   margin: 40px 0;
+  background: #292929;
+  height: 5px;
 }
 .wrapper {
   display: flex;
@@ -60,7 +61,6 @@
 .list {
   display: flex;
   flex-direction: column;
-  padding: 0 10px;
 }
 .item {
   margin-bottom: 14px;

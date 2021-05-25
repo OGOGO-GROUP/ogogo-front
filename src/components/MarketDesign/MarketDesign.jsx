@@ -3,7 +3,7 @@ import Styles from "./MarketDesign.module.css";
 import linearOne from "../../assets/images/linear/linear-1.png";
 import linearTwo from "../../assets/images/linear/linear-2.png";
 
-export const MarketDesign = ({ title, btns }) => {
+export const MarketDesign = ({ title, btns, money }) => {
   return (
     <article className={Styles.market}>
       <img src={linearOne} className={Styles.linearOne} alt="linear" />
@@ -25,7 +25,7 @@ export const MarketDesign = ({ title, btns }) => {
             </div>
             <div className={Styles.border}>
               <div className={Styles.description}>
-                <p className={Styles.subtitle}>40 000 сом</p>
+                <p className={Styles.subtitle}>{money}</p>
                 <p className={Styles.text}>Зарплата в месяц</p>
               </div>
               <div className={Styles.description}>

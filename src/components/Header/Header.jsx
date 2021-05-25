@@ -13,7 +13,7 @@ export const Header = ({ routers }) => {
     e.preventDefault();
     if (pathname === "/") {
       window.scrollTo({
-        top: routers[i + 1].current.offsetTop,
+        top: routers[i].current.offsetTop,
         behavior: "smooth",
       });
     } else {

@@ -54,10 +54,7 @@
 .content button:hover {
   background: #ff922d;
 }
-.bg {
-  width: 500px;
-  height: 500px;
-}
+
 .carts {
   display: flex;
   justify-content: space-between;

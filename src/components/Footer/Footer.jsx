@@ -4,7 +4,7 @@ import Styles from "./Footer.module.css";
 
 import Logo from "../../assets/images/logo.svg";
 
-export const Footer = () => {
+export const Footer = ({ link }) => {
   const { importAll } = useImport();
   const icons = importAll(
     require.context("./../../assets/images/social", false, /\.(png|jpe?g|svg)$/)
@@ -29,7 +29,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className={Styles.footer} id="contacts">
+    <footer className={Styles.footer} ref={link}>
       <div className="container">
         <div className={Styles.logo}>
           <img src={Logo} alt="logo" />

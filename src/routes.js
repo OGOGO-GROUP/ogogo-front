@@ -14,6 +14,7 @@ export const useRoutes = () => {
     const NEWS_LINK = useRef(null);
     const ANIMATED_LINK = useRef(null);
     const CERTIFICATE_LINK = useRef(null);
+    const FOOTER_LINK = useRef(null);
 
     return (
         <div>
@@ -21,12 +22,11 @@ export const useRoutes = () => {
                 [
                     TOPLINE_LINK,
                     COURSES_LINK,
-                    WHY_US_LINK,
                     ONLINE_LINK,
                     REVIEWS_LINK,
                     NEWS_LINK,
+                    FOOTER_LINK,
                     ANIMATED_LINK,
-                    CERTIFICATE_LINK,
                 ]
             } />
             <Switch>
@@ -57,7 +57,7 @@ export const useRoutes = () => {
                 <Route path="/courses/HTML/CSS" component={HTML} exact />
                 <Route path="/courses/UI/UX Design" component={Design} exact />
             </Switch>
-            <Footer />
+            <Footer link={FOOTER_LINK} />
         </div>
     )
 }
