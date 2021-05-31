@@ -1,18 +1,17 @@
 import React from "react";
 import Styles from "./MarketDesign.module.css";
-import linearOne from "../../assets/images/linear/linear-1.png";
-import linearTwo from "../../assets/images/linear/linear-2.png";
+import whiteGif from "../../assets/images/gif/white.gif";
 
 export const MarketDesign = ({ title, btns, money }) => {
   return (
     <article className={Styles.market}>
-      <img src={linearOne} className={Styles.linearOne} alt="linear" />
-      <img src={linearTwo} className={Styles.linearTwo} alt="linear" />
+      <img src={whiteGif} className={Styles.gif} alt="linear" />
+      <img src={whiteGif} className={Styles.gif} alt="linear" />
       <div className="container">
         <div className={Styles.wrapper}>
           <div className={Styles.content}>
             <h4>
-              <span>{title}</span> востребованы на рынке
+              <strong>{title}</strong> востребованы на рынке
             </h4>
             <p>
               Источник данных: <span>HeadHunter</span>

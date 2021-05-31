@@ -9,12 +9,13 @@
 .title {
   margin-bottom: 15px;
   font-family: "Gilroy", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 24px;
   font-style: normal;
   color: #292929;
 }
-.title span {
+.title strong {
+  font-weight: bold;
   color: #ff7a00;
 }
 .text {

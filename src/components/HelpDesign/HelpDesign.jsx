@@ -1,17 +1,16 @@
 import React from "react";
 import Styles from "./HelpDesign.module.css";
 import { Cart } from "./Cart/Cart";
-import linearOne from "../../assets/images/linear/linear-3.png";
-import linearTwo from "../../assets/images/linear/linear-4.png";
+import whiteGif from "../../assets/images/gif/white.gif";
 
 export const HelpDesign = ({ title, article }) => {
   return (
     <article className={Styles.help}>
-      <img src={linearOne} className={Styles.linearOne} alt="linear" />
-      <img src={linearTwo} className={Styles.linearTwo} alt="linear" />
+      <img src={whiteGif} className={Styles.gif} alt="linear" />
+      <img src={whiteGif} className={Styles.gif} alt="linear" />
       <div className="container">
         <p className={Styles.title}>
-          Стань <span>{title}</span>
+          Стань <strong>{title}</strong>
         </p>
         <div className={Styles.wrapper}>
           {article.map((item, i) => <Cart key={i} {...item} />)}

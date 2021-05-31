@@ -1,7 +1,7 @@
 .cart {
   max-width: 520px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 100px;
 }
@@ -9,6 +9,7 @@
   width: 112px;
   height: 112px;
   margin-right: 50px;
+  margin-top: 5px;
 }
 .subtitle {
   margin-bottom: 15px;
@@ -38,6 +39,6 @@
     width: 320px;
   }
   .cart img {
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
   }
 }

@@ -4,27 +4,28 @@
 }
 .title {
   font-family: "Gilroy", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 48px;
   font-style: normal;
   color: #292929;
   margin-bottom: 43px;
 }
-.linearOne, .linearTwo {
+.gif {
   position: absolute;
   content: "";
   z-index: -1;
 }
-.linearOne {
-  right: 0;
-  top: 0;
+.gif:nth-child(1) {
+  left: -200px;
 }
-.linearTwo {
-  left: 0;
-  bottom: 0;
+.gif:nth-child(2) {
+  right: -260px;
+  top: 150px;
 }
-.title span {
+
+.title strong {
   color: #ff7a00;
+  font-weight: bold;
 }
 .wrapper {
   display: flex;

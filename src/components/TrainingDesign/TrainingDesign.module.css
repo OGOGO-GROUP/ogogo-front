@@ -2,19 +2,22 @@
   padding: 100px 0 80px;
   position: relative;
 }
-.linearOne, .linearTwo {
+.gif {
   position: absolute;
   content: "";
-  top: 0;
   z-index: -1;
 }
-.linearTwo {
+.gif:nth-child(1) {
+  left: -220px;
   top: 0;
-  left: 0;
 }
-.linearOne {
-  bottom: 100px;
-  right: 0;
+.gif:nth-child(2) {
+  right: -190px;
+  top: 400px;
+}
+.gif:nth-child(3) {
+  bottom: 200px;
+  left: 0;
 }
 .title {
   font-family: "Gilroy", sans-serif;
@@ -39,14 +42,15 @@
 }
 .subtitle {
   font-family: "Gilroy", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 30px;
   font-style: normal;
   color: #292929;
   margin-bottom: 20px;
 }
-.subtitle span {
+.subtitle strong {
   color: #ff7a00;
+  font-weight: bold;
 }
 .text {
   font-family: "Gilroy", sans-serif;
@@ -100,5 +104,8 @@
   }
   .text {
     text-align: center;
+  }
+  .list {
+    padding: 0 15px;
   }
 }

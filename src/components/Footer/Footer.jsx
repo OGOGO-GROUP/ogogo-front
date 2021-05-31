@@ -46,7 +46,7 @@ export const Footer = ({ link }) => {
             <a href="mailto:ogogoacademy@gmail.com">ogogoacademy@gmail.com</a>
             <p>
               Лицензия на образовательную деятельность № LS200001652 от 03
-              декабрь 2021
+              декабрь 2020
             </p>
           </div>
           <div className={Styles.item}>

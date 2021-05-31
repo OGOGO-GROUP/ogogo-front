@@ -8,31 +8,34 @@
   align-items: center;
   flex-wrap: wrap;
 }
-.linearTwo, .linearOne {
+.gif {
   position: absolute;
   top: 0;
   content: "";
   z-index: -1;
 }
-.linearTwo {
-  right: 0;
+.gif:nth-child(1) {
+  left: -300px;
+  top: 200px;
 }
-.linearOne {
-  left: 0;
+.gif:nth-child(2) {
+  right: 0;
+  bottom: 0;
 }
 .content {
   max-width: 556px;
 }
 .content h4 {
   font-family: "Gilroy", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 48px;
   font-style: normal;
   color: #292929;
   margin-bottom: 18px;
 }
-.content h4 span {
+.content h4 strong {
   color: #ff7a00;
+  font-weight: bold;
 }
 .content p {
   font-family: "Gilroy", sans-serif;
