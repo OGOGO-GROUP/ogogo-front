@@ -11,7 +11,7 @@ export const MarketDesign = ({ title, btns, money }) => {
         <div className={Styles.wrapper}>
           <div className={Styles.content}>
             <h4>
-              <strong>{title}</strong> востребованы на рынке
+              {title} <strong>востребованы на рынке</strong>
             </h4>
             <p>
               Источник данных: <span>HeadHunter</span>

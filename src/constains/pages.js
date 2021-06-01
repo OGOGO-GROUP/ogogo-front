@@ -45,7 +45,7 @@ export const PAGES = {
             },
         ],
         market: {
-            title: "Frontend",
+            title: "Frontend разработчики",
             btns: {
                 one: true,
                 two: false,

@@ -15,23 +15,23 @@
 }
 .gif:nth-child(1) {
   left: -230px;
-  top: 0;
+  top: -225px;
 }
 .gif:nth-child(2) {
   right: -230px;
-  bottom: 0;
+  bottom: 100px;
 }
 .content h1 {
   font-family: "Gilroy", sans-serif;
-  font-weight: 400;
   font-size: 70px;
   font-style: normal;
-  color: #292929;
   margin-bottom: 15px;
-}
-.content h1 strong {
   color: #ff7a00;
   font-weight: bold;
+}
+.content h1 strong {
+  color: #292929;
+  font-weight: 600;
 }
 .content p {
   font-family: "Gilroy", sans-serif;

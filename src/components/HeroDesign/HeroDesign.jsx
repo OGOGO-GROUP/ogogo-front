@@ -30,7 +30,7 @@ export const HeroDesign = ({ subtitle, title, description, background }) => {
         <div className={Styles.wrapper}>
           <div className={Styles.content}>
             <h1>
-              Курс по <br /> <strong>{title}</strong>
+            <strong>Курс по</strong> <br />{title}
             </h1>
             <p>{subtitle}</p>
             <button onClick={() => openModal(title, true)}>Записаться</button>

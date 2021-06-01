@@ -27,15 +27,15 @@
 }
 .content h4 {
   font-family: "Gilroy", sans-serif;
-  font-weight: 400;
   font-size: 48px;
   font-style: normal;
-  color: #292929;
   margin-bottom: 18px;
-}
-.content h4 strong {
   color: #ff7a00;
   font-weight: bold;
+}
+.content h4 strong {
+  color: #292929;
+  font-weight: 600;
 }
 .content p {
   font-family: "Gilroy", sans-serif;

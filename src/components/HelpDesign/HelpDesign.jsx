@@ -7,10 +7,9 @@ export const HelpDesign = ({ title, article }) => {
   return (
     <article className={Styles.help}>
       <img src={whiteGif} className={Styles.gif} alt="linear" />
-      <img src={whiteGif} className={Styles.gif} alt="linear" />
       <div className="container">
         <p className={Styles.title}>
-          Стань <strong>{title}</strong>
+        <strong>Стань</strong> {title}
         </p>
         <div className={Styles.wrapper}>
           {article.map((item, i) => <Cart key={i} {...item} />)}
