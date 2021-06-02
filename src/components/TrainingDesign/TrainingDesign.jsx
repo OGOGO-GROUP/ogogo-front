@@ -1,14 +1,9 @@
 import Styles from "./TrainingDesign.module.css";
 import React from "react";
 import { Form } from "./Form/Form";
-import whiteGif from "../../assets/images/gif/white.gif";
-
 export const TrainingDesign = ({ title, text, courses }) => {
   return (
     <section className={Styles.training}>
-      <img src={whiteGif} className={Styles.gif} alt="linear" />
-      <img src={whiteGif} className={Styles.gif} alt="linear" />
-      <img src={whiteGif} className={Styles.gif} alt="linear" />
       <div className="container">
         <p className={Styles.title}>Программа обучения</p>
         <hr />

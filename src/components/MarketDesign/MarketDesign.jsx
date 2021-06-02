@@ -1,12 +1,9 @@
 import React from "react";
 import Styles from "./MarketDesign.module.css";
-import whiteGif from "../../assets/images/gif/white.gif";
 
 export const MarketDesign = ({ title, btns, money }) => {
   return (
     <article className={Styles.market}>
-      <img src={whiteGif} className={Styles.gif} alt="linear" />
-      <img src={whiteGif} className={Styles.gif} alt="linear" />
       <div className="container">
         <div className={Styles.wrapper}>
           <div className={Styles.content}>

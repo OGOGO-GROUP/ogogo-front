@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Styles from "./HeroDesign.module.css";
 import { Cart } from "./Cart/Cart";
-import whiteGif from "../../assets/images/gif/white.gif";
 import { Modal } from "../Modal/Modal";
 import { useGet } from "../../hooks/get.hook";
 
@@ -24,8 +23,6 @@ export const HeroDesign = ({ subtitle, title, description, background }) => {
 
   return (
     <section className={Styles.hero}>
-      <img src={whiteGif} className={Styles.gif} alt="linear" />
-      <img src={whiteGif} className={Styles.gif} alt="linear" />
       <div className="container">
         <div className={Styles.wrapper}>
           <div className={Styles.content}>
