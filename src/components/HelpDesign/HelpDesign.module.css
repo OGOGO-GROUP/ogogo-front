@@ -10,14 +10,6 @@
   color: #ff7a00;
   font-weight: bold;
 }
-.gif {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  right: -260px;
-  top: 150px;
-}
-
 .title strong {
   color: #292929;
   font-weight: 600;
@@ -26,6 +18,18 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.linear {
+  position: absolute;
+  z-index: -1;
+}
+.linear:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.linear:nth-child(2) {
+  bottom: 0;
+  right: 0;
 }
 @media screen and (max-width: 1100px) {
   .title {

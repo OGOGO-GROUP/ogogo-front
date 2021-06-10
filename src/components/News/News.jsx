@@ -1,11 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
 import { useGet } from "../../hooks/get.hook";
 import Styles from "./News.module.css";
 import { MONTHS } from "../../constains";
 
 export const News = ({ link }) => {
   const { data, loading } = useGet("news");
+  const history = useHistory();
   return (
     <div className={Styles.news} ref={link}>
       <div className="container">
@@ -23,19 +24,20 @@ export const News = ({ link }) => {
               .slice(0, 4)
               .map(({ image, title, date_created }, i) => {
                 return (
-                  <NavLink key={i} to={`/news/${2}`}>
-                    <div
-                      data-aos="fade-right"
-                      data-aos-delay={i * 100}
-                      className={Styles.item}
-                      style={{
-                        background: `url(${image}) 0 0 no-repeat`,
-                        backgroundSize: "cover",
-                      }}
-                    >
-                      <p>
-                        Новости -{" "}
-                        {`${new Date(date_created).getDate()}
+                  <div
+                    data-aos="fade-right"
+                    data-aos-delay={i * 100}
+                    className={Styles.item}
+                    style={{
+                      background: `url(${image}) 0 0 no-repeat`,
+                      backgroundSize: "cover",
+                      cursor: "pointer"
+                    }}
+                    onClick={() => history.push(`/news/${2}`)}
+                  >
+                    <p>
+                      Новости -{" "}
+                      {`${new Date(date_created).getDate()}
                                                 ${
                                                   MONTHS[
                                                     new Date(
@@ -46,10 +48,9 @@ export const News = ({ link }) => {
                                                 ${new Date(
                                                   date_created
                                                 ).getFullYear()}`}
-                      </p>
-                      <h4>{title}</h4>
-                    </div>
-                  </NavLink>
+                    </p>
+                    <h4>{title}</h4>
+                  </div>
                 );
               })
           ) : (

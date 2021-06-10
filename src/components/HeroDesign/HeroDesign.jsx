@@ -3,6 +3,8 @@ import Styles from "./HeroDesign.module.css";
 import { Cart } from "./Cart/Cart";
 import { Modal } from "../Modal/Modal";
 import { useGet } from "../../hooks/get.hook";
+import linearOne from "../../assets/images/linear/linear-1.png";
+import linearFour from "../../assets/images/linear/linear-4.png";
 
 export const HeroDesign = ({ subtitle, title, description, background }) => {
   const { data } = useGet("courses");
@@ -23,11 +25,14 @@ export const HeroDesign = ({ subtitle, title, description, background }) => {
 
   return (
     <section className={Styles.hero}>
+      <img src={linearOne} alt="linear" className={Styles.linear} />
+      <img src={linearFour} alt="linear" className={Styles.linear} />
       <div className="container">
         <div className={Styles.wrapper}>
           <div className={Styles.content}>
             <h1>
-            <strong>Курс по</strong> <br />{title}
+              <strong>Курс по</strong> <br />
+              {title}
             </h1>
             <p>{subtitle}</p>
             <button onClick={() => openModal(title, true)}>Записаться</button>

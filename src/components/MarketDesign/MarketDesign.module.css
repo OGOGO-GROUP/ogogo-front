@@ -8,19 +8,17 @@
   align-items: center;
   flex-wrap: wrap;
 }
-.gif {
+.linear {
   position: absolute;
-  top: 0;
-  content: "";
   z-index: -1;
 }
-.gif:nth-child(1) {
-  left: -300px;
-  top: 200px;
-}
-.gif:nth-child(2) {
-  right: 0;
+.linear:nth-child(1) {
   bottom: 0;
+  left: 0;
+}
+.linear:nth-child(2) {
+  top: 0;
+  right: 0;
 }
 .content {
   max-width: 556px;
@@ -66,7 +64,7 @@
   margin-bottom: 38px;
   text-align: center;
 }
-.description:nth-child(1){
+.description:nth-child(1) {
   margin-right: 32px;
 }
 .box button {
@@ -124,7 +122,7 @@
     flex-direction: column;
   }
   .btns button:nth-child(1) {
-    margin: 0;  
+    margin: 0;
   }
   .description {
     margin-bottom: 20px;

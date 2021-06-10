@@ -2,29 +2,29 @@
   padding: 100px 0 80px;
   position: relative;
 }
-.gif {
-  position: absolute;
-  content: "";
-  z-index: -1;
-}
-.gif:nth-child(1) {
-  left: -220px;
-  top: -250px;
-}
-.gif:nth-child(2) {
-  right: -190px;
-  top: 400px;
-}
-.gif:nth-child(3) {
-  bottom: 200px;
-  left: 0;
-}
 .title {
   font-family: "Gilroy", sans-serif;
   font-weight: 700;
   font-size: 48px;
   font-style: normal;
   color: #292929;
+}
+.linear {
+  position: absolute;
+  z-index: -1;
+}
+.linear:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+.linear:nth-child(2) {
+  bottom: 0;
+  right: 0;
+}
+.linear:nth-child(3) {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .training hr {
   margin: 40px 0;

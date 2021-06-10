@@ -1,9 +1,13 @@
 import React from "react";
 import Styles from "./MarketDesign.module.css";
+import linearOne from "../../assets/images/linear/linear-1.png";
+import linearFour from "../../assets/images/linear/linear-3.png";
 
 export const MarketDesign = ({ title, btns, money }) => {
   return (
     <article className={Styles.market}>
+      <img src={linearOne} alt="linear" className={Styles.linear} />
+      <img src={linearFour} alt="linear" className={Styles.linear} />
       <div className="container">
         <div className={Styles.wrapper}>
           <div className={Styles.content}>
