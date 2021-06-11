@@ -22,7 +22,7 @@ export const News = ({ link }) => {
           ) : data.results ? (
             data.results
               .slice(0, 4)
-              .map(({ image, title, date_created }, i) => {
+              .map(({ id, image, title, date_created }, i) => {
                 return (
                   <div
                     data-aos="fade-right"
@@ -31,9 +31,9 @@ export const News = ({ link }) => {
                     style={{
                       background: `url(${image}) 0 0 no-repeat`,
                       backgroundSize: "cover",
-                      cursor: "pointer"
+                      cursor: "pointer",
                     }}
-                    onClick={() => history.push(`/news/${2}`)}
+                    onClick={() => history.push(`/news/${id}`)}
                   >
                     <p>
                       Новости -{" "}
