@@ -48,14 +48,30 @@ export const useRoutes = () => {
                 <Route path="/news/:id" exact>
                     <NewsFragment />
                 </Route>
-                <Route path="/courses" component={CoursesPage} exact />
-                <Route path="/courses/JavaScript" component={Frontend} exact />
-                <Route path="/courses/Python Backend" component={Python} exact />
-                <Route path="/courses/Project Management" component={ProjectManager} exact />
-                <Route path="/courses/Java Backend" component={JavaBackend} exact />
-                <Route path="/courses/Android разработка" component={Android} exact />
-                <Route path="/courses/HTML/CSS" component={HTML} exact />
-                <Route path="/courses/UI/UX Design" component={Design} exact />
+                <Route path="/courses" exact>
+                    <CoursesPage />
+                </Route>
+                <Route path="/courses/JavaScript" exact>
+                    <Frontend />
+                </Route>
+                <Route path="/courses/Python Backend" exact>
+                    <Python />
+                </Route>
+                <Route path="/courses/Project Management" exact>
+                    <ProjectManager />
+                </Route>
+                <Route path="/courses/Java Backend" exact>
+                    <JavaBackend />
+                </Route>
+                <Route path="/courses/Android разработка" exact>
+                    <Android />
+                </Route>
+                <Route path="/courses/HTML/CSS" exact>
+                    <HTML />
+                </Route>
+                <Route path="/courses/UI/UX Design" exact>
+                    <Design />
+                </Route>
             </Switch>
             <Footer link={FOOTER_LINK} />
         </div>

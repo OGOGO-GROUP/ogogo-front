@@ -7,16 +7,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 AOS.init({duration: 1500, startEvent: 'load'});
-export const App = ({hideLoader}) => {
+export const App = () => {
     const routes = useRoutes()
-
-    useEffect(() => {
-        hideLoader()
-        return () => {
-            hideLoader()
-        }
-    }, [hideLoader])
-    
     return (
 		<Router>
             <div className={Styles.app}>
