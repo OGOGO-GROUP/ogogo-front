@@ -7,5 +7,6 @@ import { Android } from "./Android/Android";
 import { HTML } from "./HTML/HTML";
 import { Design } from "./Design/Design";
 import { CoursesPage } from "./CoursesPage/CoursesPage";
+import { ScratchPage } from "./Scratch/Scratch";
 
-export { NewsPage, Frontend, Python, ProjectManager, JavaBackend, Android, HTML, Design, CoursesPage };
+export { NewsPage, Frontend, Python, ProjectManager, JavaBackend, Android, HTML, Design, CoursesPage, ScratchPage };

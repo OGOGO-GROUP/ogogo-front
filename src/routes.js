@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import Styles from "./App.module.css"
 import { Switch, Route } from "react-router-dom"
 import { Header, Topline, WhyUs, Online, Reviews, News, Animated, Certificate, Footer, Courses } from "./components"
-import { NewsPage, Frontend, Python, ProjectManager, JavaBackend, Android, HTML, Design, CoursesPage } from "./pages"
+import { NewsPage, Frontend, Python, ProjectManager, JavaBackend, Android, HTML, Design, CoursesPage, ScratchPage } from "./pages"
 import { NewsFragment } from "./fragments/NewsFragment";
 
 export const useRoutes = () => {
@@ -71,6 +71,9 @@ export const useRoutes = () => {
                 </Route>
                 <Route path="/courses/UI/UX Design" exact>
                     <Design />
+                </Route>
+                <Route path="/courses/Детское программирование" exact>
+                    <ScratchPage />
                 </Route>
             </Switch>
             <Footer link={FOOTER_LINK} />

@@ -1,4 +1,67 @@
 export const PAGES = {
+    skretch: {
+        hero: {
+            title: "Scratch для юных программистов",
+            subtitle: "В вашем детстве такого не было",
+            background: "https://juniortech.org/wp-content/uploads/2020/09/Scratch-cat-logo-300x300px-150x150@2x.png",
+            description: [
+                "12 занятий, 3 раза в неделю по 2 часа в день ",
+                "Курс для детей от 7-12 лет ",
+                "Все, что требуется, — это умение читать и считать. ",
+                "От знакомства с программированием до создания своего проекта"
+            ],
+        },
+        description: [
+            {
+                subtitle: {
+                    black: "Длительность",
+                    orange: "обучения"
+                },
+                text: "12 занятий, три раза в неделю по два часа в день",
+            },
+            {
+                subtitle: {
+                    black: "Кому",
+                    orange: "подойдет курс",
+                },
+                text: "Для детей от 7 до 12 лет"
+            },
+            {
+                subtitle: {
+                    black: "Что требуется",
+                    orange: "для обучения",
+                },
+                text: "Умение читать, считать и ноутбук"
+            }
+        ],
+        market: {
+            title: "Scratch - это первый шаг программированию",
+            btns: {
+                one: false,
+                two: false,
+            },
+            money: "Стоимость курса - 5000 сом за 12 занятий",
+        },
+        help: {
+            title: "Развивайте детей вместе с академией OGOGO",
+            article: [
+                { img: `https://images.squarespace-cdn.com/content/v1/5306d5f6e4b082235ce9d2d8/1549754371373-A9N41FV42404X9T8IIC0/ke17ZwdGBToddI8pDm48kBT_eaXA_CoP-_gRcT9AlUlZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7aKHqy_Pq5SZUkyxONRRLX5bD3l2DSKQStaWJmGo-T5rVoKYF0D8S7akWTgAN7dt8A/Scratch+Logo?format=300w`, subtitle: "Ваши дети научатся создавать игры и анимации" },
+                { img: `https://images.squarespace-cdn.com/content/v1/5306d5f6e4b082235ce9d2d8/1549754371373-A9N41FV42404X9T8IIC0/ke17ZwdGBToddI8pDm48kBT_eaXA_CoP-_gRcT9AlUlZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7aKHqy_Pq5SZUkyxONRRLX5bD3l2DSKQStaWJmGo-T5rVoKYF0D8S7akWTgAN7dt8A/Scratch+Logo?format=300w`, subtitle: "Раскроется творческий потенциал ребенка" },
+                { img: `https://images.squarespace-cdn.com/content/v1/5306d5f6e4b082235ce9d2d8/1549754371373-A9N41FV42404X9T8IIC0/ke17ZwdGBToddI8pDm48kBT_eaXA_CoP-_gRcT9AlUlZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7aKHqy_Pq5SZUkyxONRRLX5bD3l2DSKQStaWJmGo-T5rVoKYF0D8S7akWTgAN7dt8A/Scratch+Logo?format=300w`, subtitle: "Ребенок научится решать задачи , которые пригодятся в повседневной жизни" },
+                { img: `https://images.squarespace-cdn.com/content/v1/5306d5f6e4b082235ce9d2d8/1549754371373-A9N41FV42404X9T8IIC0/ke17ZwdGBToddI8pDm48kBT_eaXA_CoP-_gRcT9AlUlZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7aKHqy_Pq5SZUkyxONRRLX5bD3l2DSKQStaWJmGo-T5rVoKYF0D8S7akWTgAN7dt8A/Scratch+Logo?format=300w`, subtitle: "На курсе дети обретут друзей и единомышленников" },
+            ]
+        },
+        training: {
+            title: "От знакомства с программированием до создания своего проекта",
+            text: `Мы уверены, благодаря программированию детишки способны развить в себе целый комплекс полезных навыков, которые сформируют потенциал для будущей успешной жизни!`,
+            courses: [
+                "Введение в Scratch",
+                "Графика, звук, основные приемы программирования",
+                "Работа с алгоритмами",
+                "Защита своего проекта"
+            ],
+        },
+    },
     frontend: {
         hero: {
             title: "JavaScript Frontend",

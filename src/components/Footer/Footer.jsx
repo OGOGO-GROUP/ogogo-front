@@ -1,15 +1,17 @@
 import React from "react";
 import { useImport } from "../../hooks/import.hook";
 import Styles from "./Footer.module.css";
+import { useLocation } from "react-router-dom";
 
 import Logo from "../../assets/images/logo.svg";
 
 export const Footer = ({ link }) => {
   const { importAll } = useImport();
+  const { pathname } = useLocation();
   const icons = importAll(
     require.context("./../../assets/images/social", false, /\.(png|jpe?g|svg)$/)
   );
-
+  console.log(pathname);
   const links = [
     {
       icon: icons[0].default,
@@ -42,7 +44,11 @@ export const Footer = ({ link }) => {
             <p>Пользовательское соглашение</p>
           </div>
           <div className={Styles.item}>
-            <a href="tel:+996550312312">+996 (550) 312-312</a>
+            {pathname === "/courses/Детское программирование" ? (
+              <a href="tel:+996559505580">+996 (559) 505-580</a>
+            ) : (
+              <a href="tel:+996550312312">+996 (550) 312-312</a>
+            )}
             <a href="mailto:ogogoacademy@gmail.com">ogogoacademy@gmail.com</a>
             <p>
               Лицензия на образовательную деятельность № LS200001652 от 03
