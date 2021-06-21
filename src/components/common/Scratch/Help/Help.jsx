@@ -11,7 +11,7 @@ export const Help = ({ title, article }) => {
       <img src={linearFour} alt="linear" className={Styles.linear} />
       <div className="container">
         <p className={Styles.title}>
-         {title}
+          <strong>Развивайте детей вместе с </strong>академией OGOGO
         </p>
         <div className={Styles.wrapper}>
           {article.map((item, i) => (
