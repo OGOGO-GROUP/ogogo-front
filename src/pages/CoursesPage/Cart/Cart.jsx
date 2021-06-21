@@ -5,7 +5,8 @@ import Styles from "./Cart.module.css";
 export const Cart = ({ title, image, short_description, openModal }) => {
   const history = useHistory();
   const showCourse = () => {
-    history.push("/courses/" + title);
+    const link = title === "Детское программирование" ? "scratch" : title;
+    history.push("/courses/" + link);
   };
   return (
     <div

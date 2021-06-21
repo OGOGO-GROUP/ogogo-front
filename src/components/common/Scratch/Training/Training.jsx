@@ -17,7 +17,7 @@ export const Training = ({ title, text, courses }) => {
         <div className={Styles.wrapper}>
           <div className={Styles.description}>
             <p className={Styles.subtitle}>
-              {title}
+              От знакомства с программированием до создания своего проекта
             </p>
             <p className={Styles.text}>{text}</p>
           </div>

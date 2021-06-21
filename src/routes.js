@@ -72,7 +72,7 @@ export const useRoutes = () => {
                 <Route path="/courses/UI/UX Design" exact>
                     <Design />
                 </Route>
-                <Route path="/courses/Детское программирование" exact>
+                <Route path="/courses/scratch" exact>
                     <ScratchPage />
                 </Route>
             </Switch>
