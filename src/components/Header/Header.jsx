@@ -31,7 +31,7 @@ export const Header = ({ routers }) => {
             <ul>
               {LINKS.map(({ label, target }, i) => {
                 return (
-                  <li key={i} className={Styles.item}>
+                  <li key={i} className={Styles.item} onClick={() => setOpen(false)}>
                     {label === "Курсы" ? (
                       <NavLink to={target}>{label}</NavLink>
                     ) : (
