@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import Styles from "./Hero.module.css";
+import Styles from "./HeroIntensive.module.css";
 import { Cart } from "./Cart/Cart";
-import { Modal } from "../../../Modal/Modal";
+import { Modal } from "../Modal/Modal";
+import { useGet } from "../../hooks/get.hook";
+import backgroundImg from "./img/Learning-pana1.png"
 
-export const Hero = ({ subtitle, title, description, background }) => {
+export const HeroIntensive = ({ subtitle, title, description }) => {
+  const { data } = useGet("courses");
 
   const [modal, setModal] = useState({
     opened: false,
@@ -21,19 +24,19 @@ export const Hero = ({ subtitle, title, description, background }) => {
 
   return (
     <section className={Styles.hero}>
-      <img src="https://i.gifer.com/U0Vg.gif" alt="linear" className={Styles.linear} />
-      <img src="https://i.gifer.com/U0Vg.gif" alt="linear" className={Styles.linear} />
+      <img src='https://i.gifer.com/U0Vg.gif' alt="linear" className={Styles.linear} />
+      <img src='https://i.gifer.com/U0Vg.gif' alt="linear" className={Styles.linear} />
       <div className="container">
         <div className={Styles.wrapper}>
           <div className={Styles.content}>
+            <span>Изучи программирование</span>
             <h1>
-              <strong>Курс по</strong> <br />
               {title}
             </h1>
             <p>{subtitle}</p>
-            <button onClick={() => openModal(title, true)}>Записаться</button>
+            <button onClick={() => openModal(title, true)}>Подробнее</button>
           </div>
-          <img src={background} className={Styles.bg} alt="bg" />
+          <img src={backgroundImg} className={Styles.bg} alt="bg" />
         </div>
         <div className={Styles.carts}>
           {description.map((item, i) => (
@@ -47,4 +50,3 @@ export const Hero = ({ subtitle, title, description, background }) => {
     </section>
   );
 };
-

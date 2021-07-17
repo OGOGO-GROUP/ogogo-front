@@ -1,20 +1,33 @@
 import Styles from "./Training.module.css";
 import React from "react";
-import { Form } from "../../CoursePage/Training/Form/Form";
+import { Form } from "./Form/Form";
 
 export const Training = ({ title, text, courses }) => {
   return (
     <section className={Styles.training}>
-      <img src="https://i.gifer.com/U0Vg.gif" alt="linear" className={Styles.linear} />
-      <img src="https://i.gifer.com/U0Vg.gif" alt="linear" className={Styles.linear} />
-      <img src="https://i.gifer.com/U0Vg.gif" alt="linear" className={Styles.linear} />
+      <img
+        src="https://i.gifer.com/U0Vg.gif"
+        alt="linear"
+        className={Styles.linear}
+      />
+      <img
+        src="https://i.gifer.com/U0Vg.gif"
+        alt="linear"
+        className={Styles.linear}
+      />
+      <img
+        src="https://i.gifer.com/U0Vg.gif"
+        alt="linear"
+        className={Styles.linear}
+      />
       <div className="container">
         <p className={Styles.title}>Программа обучения</p>
         <hr />
         <div className={Styles.wrapper}>
           <div className={Styles.description}>
             <p className={Styles.subtitle}>
-              От знакомства с программированием до создания своего проекта
+              <strong>Основы</strong> {title}.{" "}
+              <strong>Погружение в профессию</strong>
             </p>
             <p className={Styles.text}>{text}</p>
           </div>

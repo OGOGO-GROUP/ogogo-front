@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
-import {
-  HeroDesign,
-  MarketDesign,
-  DescriptionDesign,
-  HelpDesign,
-  Banner,
-  TrainingDesign,
-} from "../../";
+import { Hero } from "./Hero/Hero";
+import { Description } from "./Description/Description";
+import { Market } from "./Market/Market";
+import { Help } from "./Help/Help";
+import { Banner } from "./Banner/Banner";
+import { Training } from "./Training/Training";
 
 export const CoursePage = ({ data }) => {
   const { hero, description, market, help, training } = data;
@@ -17,12 +15,12 @@ export const CoursePage = ({ data }) => {
   }, []);
   return (
     <main>
-      <HeroDesign {...hero} />
-      <DescriptionDesign description={description} />
-      <MarketDesign {...market} />
-      <HelpDesign {...help} />
+      <Hero {...hero} />
+      <Description description={description} />
+      <Market {...market} />
+      <Help {...help} />
       <Banner />
-      <TrainingDesign {...training} />
+      <Training {...training} />
     </main>
   );
 };

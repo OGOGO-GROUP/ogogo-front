@@ -1,21 +1,20 @@
 import React, { useState } from "react";
-import Styles from "./Form.module.css";
-import { usePost } from "../../../hooks/post.hook";
-import { ModalInfo } from "../../../components/common/ModalInfo/ModalInfo";
+import Styles from "./FormIntensive.module.css";
+import { usePost } from "../../hooks/post.hook";
+import { ModalInfo } from "../common";
 
-export const Form = () => {
-  const { postHandler } = usePost();
-  const [visible, setVisible] = useState(false);
+
+export const FormIntensive = () => {
   const [error, setError] = useState(false);
-
-  const changeVisible = () => {
-    setVisible(true);
-    if (error == !false) {
-      setVisible(true);
-    } else {
-      console.log("False");
+  const { postHandler } = usePost();
+  const [visible, setVisible] = useState(false)
+  
+  const changeVisible = ()=> {
+    setVisible(true)
+    if (error==!false) {
+      setVisible(true)
     }
-  };
+  }
 
   const sendRequest = (e) => {
     e.preventDefault();
@@ -26,7 +25,7 @@ export const Form = () => {
   return (
     <form className={Styles.form} onSubmit={sendRequest}>
       <p className={Styles.title}>
-        Записаться на курсы в <span>OGOGO</span>
+        Заполните заявку и мы прокунсультируем вас!
       </p>
       <p
         className={
@@ -43,13 +42,19 @@ export const Form = () => {
           onChange={() => setError(false)}
         />
         <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          onChange={() => setError(false)}
+        />
+        <input
           type="text"
           name="phone"
           placeholder="Номер телефона"
           onChange={() => setError(false)}
         />
       </div>
-      <button className={Styles.btn} onClick={changeVisible}>Отправить</button>
+      <button className={Styles.btn} if error onClick={changeVisible} >Отправить</button>
       <ModalInfo setVisible={setVisible} visible={visible} />
     </form>
   );

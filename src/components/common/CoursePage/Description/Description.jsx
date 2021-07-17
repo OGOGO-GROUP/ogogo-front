@@ -5,8 +5,16 @@ import { Cart } from "./Cart/Cart";
 export const Description = ({ description }) => {
   return (
     <section className={Styles.description}>
-      <img src="https://i.gifer.com/U0Vg.gif" alt="linear" className={Styles.linear} />
-      <img src="https://i.gifer.com/U0Vg.gif" alt="linear" className={Styles.linear} />
+      <img
+        src="https://i.gifer.com/U0Vg.gif"
+        alt="linear"
+        className={Styles.linear}
+      />
+      <img
+        src="https://i.gifer.com/U0Vg.gif"
+        alt="linear"
+        className={Styles.linear}
+      />
       <div className="container">
         <p className={Styles.subtitle}>Кому подойдёт курс</p>
         <div className={Styles.wrapper}>

@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import Styles from "./Hero.module.css";
 import { Cart } from "./Cart/Cart";
 import { Modal } from "../../../Modal/Modal";
+import { useGet } from "../../../../hooks/get.hook";
 
 export const Hero = ({ subtitle, title, description, background }) => {
+  const { data } = useGet("courses");
 
   const [modal, setModal] = useState({
     opened: false,
@@ -47,4 +49,3 @@ export const Hero = ({ subtitle, title, description, background }) => {
     </section>
   );
 };
-

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Styles from "./Form.module.css";
-import { usePost } from "../../../hooks/post.hook";
-import { ModalInfo } from "../../../components/common/ModalInfo/ModalInfo";
+import { usePost } from "../../../../../hooks/post.hook";
+import { ModalInfo } from "../../../ModalInfo/ModalInfo";
 
 export const Form = () => {
   const { postHandler } = usePost();
@@ -21,20 +21,14 @@ export const Form = () => {
     e.preventDefault();
     const name = e.target.name.value;
     const phone = e.target.phone.value;
-    postHandler({ phone, name }, "consult/");
+    const data = { name, phone };
+    name = "";
+    phone = "";
+    postHandler(data, "consult/");
   };
   return (
     <form className={Styles.form} onSubmit={sendRequest}>
-      <p className={Styles.title}>
-        Записаться на курсы в <span>OGOGO</span>
-      </p>
-      <p
-        className={
-          error ? `${Styles.warning} ${Styles.error}` : `${Styles.warning}`
-        }
-      >
-        Заполните все поля!
-      </p>
+      <p className={Styles.title}>Получите бесплатную консультацию от нас !</p>
       <div className={Styles.field}>
         <input
           type="text"
@@ -43,13 +37,13 @@ export const Form = () => {
           onChange={() => setError(false)}
         />
         <input
-          type="text"
+          type="tel"
           name="phone"
           placeholder="Номер телефона"
           onChange={() => setError(false)}
         />
       </div>
-      <button className={Styles.btn} onClick={changeVisible}>Отправить</button>
+      <button className={Styles.btn} onClick={changeVisible}>Получить консультацию</button>
       <ModalInfo setVisible={setVisible} visible={visible} />
     </form>
   );

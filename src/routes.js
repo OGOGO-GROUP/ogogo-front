@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom"
 import { Header, Topline, WhyUs, Online, Reviews, News, Animated, Certificate, Footer, Courses } from "./components"
 import { NewsPage, Frontend, Python, ProjectManager, JavaBackend, Android, HTML, Design, CoursesPage, ScratchPage } from "./pages"
 import { NewsFragment } from "./fragments/NewsFragment";
+import { Intensive } from "./pages/Intensive/Intensive"
 
 export const useRoutes = () => {
     const TOPLINE_LINK = useRef(null);
@@ -74,6 +75,9 @@ export const useRoutes = () => {
                 </Route>
                 <Route path="/courses/scratch" exact>
                     <ScratchPage />
+                </Route>
+                <Route path="/courses/intensive" exact>
+                    <Intensive />
                 </Route>
             </Switch>
             <Footer link={FOOTER_LINK} />
