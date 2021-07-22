@@ -3,6 +3,22 @@
   max-width: 856px;
   margin: 60px auto;
 }
+.form.notActive .btn{
+  pointer-events: none;
+  background:linear-gradient(87.06deg, rgba(255, 122, 0, .6) -8.73%, rgba(255, 153, 0, .6) 114.08%);;
+}
+.massage {
+  color: rgb(113, 213, 153);
+  position: absolute;
+  bottom: -25px;
+  width: 200px;
+  left: calc(50% - 100px);
+  font: 14px;
+  display: none;
+}
+.form.notActive .massage {
+  display: block;
+}
 .title {
   font-family: "Gilroy", sans-serif;
   font-weight: 700;
@@ -19,6 +35,7 @@
   justify-content: space-evenly;
   margin-bottom: 47px;
   flex-wrap: wrap;
+  position: relative;
 }
 .field input {
   font-family: "Gilroy", sans-serif;
@@ -63,6 +80,7 @@
 .btn:hover {
   background: #fa983d;
 }
+
 
 @media screen and (max-width: 600px) {
     .title {

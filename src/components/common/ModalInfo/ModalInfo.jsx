@@ -5,12 +5,12 @@ import Ellipse from "../../../assets/images/modal/Ellipse.svg"
 import Rectangle from "../../../assets/images/modal/Rectangle.svg"
 
 
-export const ModalInfo = (props) => {
+export const ModalInfo = ({ visible, setVisible }) => {;
     return (
-        <div className={props.visible ? "modal active" : "modal"} onClick={() => props.setVisible(false)}> 
+        <div className={visible ? "modal active" : "modal"} onClick={() => setVisible(false)}> 
             <div className='modal__content'>
 
-                <img src={CloseIcon} alt="X" className="close__icon" onClick={() => props.setVisible(false)} />
+                <img src={CloseIcon} alt="X" className="close__icon" onClick={() => setVisible(false)} />
                 <span className="modal__title">
                     Заявка подана
             </span>
@@ -23,3 +23,5 @@ export const ModalInfo = (props) => {
         </div>
     )
 }
+
+

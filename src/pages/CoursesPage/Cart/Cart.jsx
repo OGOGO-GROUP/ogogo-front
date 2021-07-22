@@ -5,7 +5,14 @@ import Styles from "./Cart.module.css";
 export const Cart = ({ title, image, short_description, openModal }) => {
   const history = useHistory();
   const showCourse = () => {
-    const link = title === "Детское программирование" ? "scratch" : title;
+    let link = "";
+    if(title === "Детское программирование") {
+      link = "scratch";
+    } else if(title === "Интенсив") {
+      link = "intensive";
+    } else {
+      link = title;
+    };
     history.push("/courses/" + link);
   };
   return (

@@ -28,7 +28,7 @@
   left: -150px;
 }
 .linear:nth-child(2) {
-  top: 350px;
+  bottom: 0px;
   right: -150px;
 }
 @media screen and (max-width: 1100px) {
@@ -38,4 +38,6 @@
   .title {
     font-size: 32px;
   }
+}
+@media screen and (max-width: 1100px) {
 }

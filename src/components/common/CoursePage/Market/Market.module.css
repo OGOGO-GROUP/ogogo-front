@@ -11,6 +11,7 @@
 .linear {
   position: absolute;
   z-index: -1;
+  
 }
 .linear:nth-child(1) {
   bottom: 100px;
@@ -132,6 +133,15 @@
     margin-right: 0;
   }
 }
+@media screen and (max-width: 810px) {
+  .linear:nth-child(1) {
+    display: none;
+  }
+  .linear:nth-child(2) {
+    right: -200px;
+    top: -200px;
+  }
+}
 @media screen and (max-width: 550px) {
   .box {
     flex-direction: column;
@@ -150,4 +160,6 @@
   .content h4 {
     font-size: 30px;
   }
+  
 }
+

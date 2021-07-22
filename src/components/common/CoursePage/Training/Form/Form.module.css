@@ -6,6 +6,22 @@
   padding: 55px 125px;
   border-radius: 20px;
 }
+.form.notActive .btn{
+  pointer-events: none;
+  background:linear-gradient(87.06deg, rgba(255, 122, 0, .6) -8.73%, rgba(255, 153, 0, .6) 114.08%);;
+}
+.massage {
+  color: rgb(113, 213, 153);
+  position: absolute;
+  bottom: -25px;
+  width: 200px;
+  left: calc(50% - 100px);
+  font: 14px;
+  display: none;
+}
+.form.notActive .massage {
+  display: block;
+}
 .title {
   margin-bottom: 33px;
   font-family: "Gilroy", sans-serif;
@@ -19,6 +35,7 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  position: relative;
 }
 .field input {
   padding: 14px 17px;

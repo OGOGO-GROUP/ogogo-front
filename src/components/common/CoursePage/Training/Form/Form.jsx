@@ -6,25 +6,20 @@ import { ModalInfo } from "../../../ModalInfo/ModalInfo";
 export const Form = () => {
   const { postHandler } = usePost();
   const [visible, setVisible] = useState(false);
-  const [error, setError] = useState(false);
 
   const changeVisible = () => {
     setVisible(true);
-    if (error == !false) {
-      setVisible(true);
-    } else {
-      console.log("False");
-    }
   };
 
+  const notActiveClass = Styles.notActive
   const sendRequest = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const phone = e.target.phone.value;
     const data = { name, phone };
-    name = "";
-    phone = "";
     postHandler(data, "consult/");
+    e.target.reset();
+    e.target.classList.add(notActiveClass)
   };
   return (
     <form className={Styles.form} onSubmit={sendRequest}>
@@ -34,14 +29,13 @@ export const Form = () => {
           type="text"
           name="name"
           placeholder="Имя"
-          onChange={() => setError(false)}
         />
         <input
           type="tel"
           name="phone"
           placeholder="Номер телефона"
-          onChange={() => setError(false)}
         />
+        <span className={Styles.massage}>Заявка уже подана!</span>
       </div>
       <button className={Styles.btn} onClick={changeVisible}>Получить консультацию</button>
       <ModalInfo setVisible={setVisible} visible={visible} />

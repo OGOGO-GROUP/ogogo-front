@@ -14,14 +14,17 @@ export const HeroIntensive = ({ subtitle, title, description }) => {
     select: "",
   });
 
-  const openModal = (course, on) => {
-    setModal({
-      opened: true,
-      on: on,
-      course: course,
-    });
+  const scrollCourses = () => {
+    if(window.matchMedia("(max-width: 700px)").matches) {
+      window.scroll(0, 1000)
+    }
+    else {
+      window.scroll(0, 850)
+    }
+   
   };
 
+  
   return (
     <section className={Styles.hero}>
       <img src='https://i.gifer.com/U0Vg.gif' alt="linear" className={Styles.linear} />
@@ -34,7 +37,7 @@ export const HeroIntensive = ({ subtitle, title, description }) => {
               {title}
             </h1>
             <p>{subtitle}</p>
-            <button onClick={() => openModal(title, true)}>Подробнее</button>
+            <button onClick={scrollCourses}>Подробнее</button>     
           </div>
           <img src={backgroundImg} className={Styles.bg} alt="bg" />
         </div>
@@ -44,9 +47,6 @@ export const HeroIntensive = ({ subtitle, title, description }) => {
           ))}
         </div>
       </div>
-      {modal.opened === true ? (
-        <Modal modal={modal} setModal={setModal} />
-      ) : null}
     </section>
   );
 };
